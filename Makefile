@@ -17,8 +17,8 @@ LIBS = -lgnuefi -lefi
 SRC_FILES = main.c
 
 OBJ_FILES = $(SRC_FILES:.c=.o)
-SO_FILE = main.so
-TARGET = main.efi
+SO_FILE = paint.so
+TARGET = paint.efi
 CRT0_FILE = $(GNU_EFI_DIR)/x86_64/gnuefi/crt0-efi-x86_64.o
 
 all: $(TARGET)
