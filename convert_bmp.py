@@ -90,14 +90,11 @@ def main(args):
             print("BMP color pallet not supported.")
             exit(1)
 
-        print(calculate_padding(bmp_f))
-
         reverse_rows = parse_bmp_pixel_data(bmp_f)
     
     with open(output_filename, 'wb') as out_f:
         for row in reversed(reverse_rows):
             out_f.write(row)
-            print(row)
 
 if __name__ == '__main__':
     main(sys.argv)
