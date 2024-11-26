@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+sudo mount "$USB_EFI_SYSTEM_PARTITION" "$MOUNTPOINT_DIR"
+
+sudo cp "$EFI_IMAGE_PATH" "$MOUNTPOINT_DIR/EFI/BOOT/BOOTX64.EFI"
+
+sudo umount "$USB_EFI_SYSTEM_PARTITION"
+sudo eject "$USB_EFI_SYSTEM_PARTITION"

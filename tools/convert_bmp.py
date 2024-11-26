@@ -83,7 +83,7 @@ def main(args):
         check_DIB_header(bmp_f)
 
         if (get_bytes_per_pixel(bmp_f) != 3):
-            print("BMP encoding need 24 bits per pixel.")
+            print("BMP encoding needs 24 bits per pixel.")
             exit(1)
 
         if (uses_color_pallet(bmp_f)):
